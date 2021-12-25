@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "u0NYthtwrafbMqX6hDUdrWoffHitPigjM640P5LjPJLnmxZP5e150ZnfEkjT97r0mzHcizWa36oJonugOXE/GQ==",
+  "success": true,
+  "projectFilePath": "D:\\Dev\\Jokenpo\\Jokenpo\\Jokenpo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
