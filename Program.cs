@@ -6,9 +6,8 @@ namespace Jokenpo
     {
         static void Main(string[] args)
         {
-            Console.Title = ("Jokenpo");
-            string entrada, SuaEscolha, EscolhaDoPC;
-            int NumeroEscolha;
+            int numeroEscolha;
+            Console.Title = ("Jokenpô");
             do
             {
                 Console.WriteLine("------------------------------------");
@@ -16,24 +15,24 @@ namespace Jokenpo
                     " (digite '6' para sair):", ConsoleColor.Blue);
                 Console.ForegroundColor = ConsoleColor.Magenta;
 
-                entrada = Console.ReadLine();
+                var entrada = Console.ReadLine();
                 if (entrada == "6")
                     break;
 
-                NumeroEscolha = Convert.ToInt32(entrada);
-                SuaEscolha = RetornaSuaEscolha(NumeroEscolha);
+                numeroEscolha = Convert.ToInt32(entrada);
+                var suaEscolha = RetornaSuaEscolha(numeroEscolha);
 
                 var NumAleatorio = new Random();
-                EscolhaDoPC = RetornaPC(NumAleatorio.Next(3));
+                var escolhaPC = RetornaPC(NumAleatorio.Next(3));
 
-                EscreveColorido("Você: " + SuaEscolha, ConsoleColor.Yellow);
+                EscreveColorido("Você: " + suaEscolha, ConsoleColor.Yellow);
                 EscreveColorido("X", ConsoleColor.Cyan);
-                EscreveColorido("PC: " + EscolhaDoPC, ConsoleColor.Yellow);
+                EscreveColorido("PC: " + escolhaPC, ConsoleColor.Yellow);
                 Console.WriteLine("------------------------------------");
-                var resultado = RetornaResultado(SuaEscolha, EscolhaDoPC);
+                var resultado = RetornaResultado(suaEscolha, escolhaPC);
                 EscreveColorido(resultado, ConsoleColor.Yellow);
                 Console.WriteLine("");
-                var explicaResultado = ExplicacaoResultado(SuaEscolha, EscolhaDoPC);
+                var explicaResultado = ExplicacaoResultado(suaEscolha, escolhaPC);
                 EscreveColorido(explicaResultado, ConsoleColor.Yellow);
                 Console.WriteLine("------------------------------------");
                 EscreveColorido("Pressione qualquer tecla para continuar", ConsoleColor.Red);
@@ -45,7 +44,7 @@ namespace Jokenpo
                     Console.Clear();
 
                 Console.WriteLine("");
-            } while (NumeroEscolha != 6);
+            } while (numeroEscolha != 6);
 
             Console.WriteLine("Volte seeeempre!!");
         }
@@ -105,34 +104,34 @@ namespace Jokenpo
 
             return "EMPATE";
         }
-        static string RetornaSuaEscolha(int Escolha)
+        static string RetornaSuaEscolha(int escolha)
         {
-            if (Escolha == 0)
+            if (escolha == 0)
                 return "Pedra";
-            else if (Escolha == 1)
+            else if (escolha == 1)
                 return "Papel";
-            else if (Escolha == 2)
+            else if (escolha == 2)
                 return "Tesoura";
-            else if (Escolha == 3)
+            else if (escolha == 3)
                 return "Lagarto";
-            else if (Escolha == 4)
+            else if (escolha == 4)
                 return "Spock";
-            else if (Escolha == 6)
+            else if (escolha == 6)
                 return " >>Saindo<<";
             else
                 return "Não ha essa escolha, tente novamente...";
         }
-        static string RetornaPC(int EscolhaPC)
+        static string RetornaPC(int escolhaPC)
         {
-            if (EscolhaPC == 0)
+            if (escolhaPC == 0)
                 return "Pedra";
-            else if (EscolhaPC == 1)
+            else if (escolhaPC == 1)
                 return "Papel";
-            else if (EscolhaPC == 2)
+            else if (escolhaPC == 2)
                 return "Tesoura";
-            else if (EscolhaPC == 3)
+            else if (escolhaPC == 3)
                 return "Lagarto";
-            else if (EscolhaPC == 4)
+            else if (escolhaPC == 4)
                 return "Spock";
             else
                 return "aaaahhhhhh";
