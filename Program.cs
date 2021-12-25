@@ -131,10 +131,9 @@ namespace Jokenpo
                 return "Tesoura";
             else if (escolhaPC == 3)
                 return "Lagarto";
-            else if (escolhaPC == 4)
-                return "Spock";
             else
-                return "aaaahhhhhh";
+                return "Spock";
+          
         }
         static void EscreveColorido(string frase, ConsoleColor cor)
         {
